@@ -2,4 +2,4 @@
 - name: Convert CentOS or Oracle Linux to Red Hat Enterprise Linux
   hosts: all
   roles:
-    - ims.postmigration-convert2rhel
+    - fdupont_redhat.ims_postmigration_convert2rhel
