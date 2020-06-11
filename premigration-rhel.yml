@@ -1,0 +1,5 @@
+---
+- name: Run Red Hat Enterprise Linux premigration
+  hosts: all
+  roles:
+    - fdupont_redhat.ims_premigration_rhel

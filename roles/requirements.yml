@@ -8,7 +8,5 @@
 - src: https://github.com/fdupont-redhat/ims.postmigration-leapp.git
   version: master
   name: ims.postmigration-leapp
-- src: https://github.com/fdupont-redhat/ims.premigration-force_nic_names.git
-  version: master
-  name: ims.premigration-force_nic_names
+- name: fdupont_redhat.ims_premigration_rhel
 - name: fdupont_redhat.ims_premigration_windows

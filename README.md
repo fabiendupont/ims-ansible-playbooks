@@ -1,17 +1,20 @@
-# IMS - RHTE 2019 Demos
+# IMS - Ansible Playbooks
 
-This repository contains the playbooks used for the IMS RHTE 2019 demos.
+This repository contains the playbooks used in pre/post-migratio with
+Infrastructure Migration Solution (IMS). The playbooks mainly wrap calls to
+roles that are maintained in separated repositories, so very little development
+is done in this repository.
 
-## Pre-migration - Force NIC Names
+## Pre-migration - Red Hat Enterprise Linux
 
 This playbook does 2 things:
 
-- Create a udev rules file that associate the names of the NICs to their MAC addresses.
+1. Create a udev rules file that associate the names of the NICs to their MAC addresses.
   This allows to keep a consistent naming across virtualization platform, and to keep static networking working on Linux.
-- Install `qemu-guest-agent` package. This allows RHV to know the IP address of the virtual machine.
-  In turn, CloudForms can collect it during the inventory and we can use it in post-migration playbook inventory.
 
-The playbook depends on a role named [ims.premigration-force_nic_names](https://github.com/fdupont-redhat/ims.premigration-force_nic_names.git)
+2. Install `qemu-guest-agent` package. This allows RHV to know the IP address of the virtual machine. In turn, CloudForms can collect it during the inventory and we can use it in post-migration playbook inventory.
+
+The playbook depends on a role named [fdupont_redhat.ims_premigration_rhel](https://galaxy.ansible.com/fdupont_redhat/ims_premigration_rhel)
 
 ## Post-migration - Convert2RHEL
 

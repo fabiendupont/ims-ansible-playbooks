@@ -1,5 +1,0 @@
----
-- name: Force NIC names to preserve network connectivity
-  hosts: all
-  roles:
-    - ims.premigration-force_nic_names
